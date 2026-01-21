@@ -1,42 +1,111 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  list-style: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body{
+  width: 100%;
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo{
+  display: flex;
+  align-items: left;
+  width: 100%;
+  max-width: 900px;
+  min-width: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.todo-app{
+   margin-bottom: 30px;
+   text-align: center;
 }
 
-.card {
-  padding: 2em;
+.todo-app span{ 
+  font-size: 26px;
+  font-weight: 400;
+  color: rgb(99, 95, 95);  
+  position: relative;
+  cursor: pointer;
+  
 }
 
-.read-the-docs {
-  color: #888;
+.todo-app span::after{
+  content: '';
+  width: 50%;
+  height: 4px;
+  border-radius: 6px;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(199, 199, 246);
+  left: 0;
+  transition: width .4s ease-in-out;
+}
+
+.todo-app span:hover::after{
+  width: 100% !important;  
+}
+
+input, button{
+  width: 100%;
+  margin-bottom: 18px;
+  height: 48px;
+  border: none;
+  outline: none;
+  background-color: #f2f4f5;
+  border-radius: 6px;
+  font-size: 18px;
+  color: gray;
+}
+
+input{
+  padding-left: 15px;
+}
+
+button{
+  background-color: #d8eaf4;
+  color: #000;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #9fcde6;
+}
+
+#listItems{
+  margin-top: 30px;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(211, 206, 249);  
+  padding: 20px;
+  border-radius: 8px;
+}
+
+ul li:hover{
+  background-color: rgb(164, 175, 248);  
+  color: #fff;
+}
+
+li span{
+  font-size: 18px;
+  color: rgb(1, 17, 3);
+  cursor: pointer;
 }
