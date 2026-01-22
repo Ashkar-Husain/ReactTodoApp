@@ -92,6 +92,7 @@ button:hover{
 ul li{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   margin-bottom: 10px;
   background-color: rgb(211, 206, 249);  
@@ -108,4 +109,9 @@ li span{
   font-size: 18px;
   color: rgb(1, 17, 3);
   cursor: pointer;
+  background-color: #fff;
+  padding: 5px 20px;
+  border-radius: 8px;
+  
+
 }
